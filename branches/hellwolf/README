@@ -42,7 +42,8 @@ After installing FUSE, compile convmvfs the usual way:
   make
   make install (as root)
 
-And you are ready to go.
+And you are ready to go.You can now type 'convmvfs --help" to get help
+infomation.
 
 If checking out from CVS for the first time also do
 'autoreconf -iv' before doing './configure'.
@@ -94,16 +95,16 @@ Note:
 * If you use normal user to mount file system be sure to have 
 r/w permision to /dev/fuse.
 
-* use iconv --list to see which charsets are supported.
+* use `iconv --list` to see which charsets are supported.
 
 * to allow other user to access the mount point use allow_other option
 
-Sample use:
+* IMPORTANT: if mount point and srcdir was the same dir, readdir oper
+  would enter dead loop. BE SURE TO AVOID THIS SITUATION!
 
+Sample use:
 * to mount
-$convmvfs /ftp/pub_gbk -o srcdir=/ftp/pub, \
-         icharset=utf8,ocharset=gbk
+$convmvfs /ftp/pub_gbk -o srcdir=/ftp/pub, icharset=utf8,ocharset=gbk
 
 * to umount
 $fusermount -u /ftp/pub_gbk
-
