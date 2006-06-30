@@ -1,0 +1,4 @@
+SUBDIRS = src
+
+EXTRA_DIST = README.zh_CN.UTF-8 
+
