@@ -1,3 +1,39 @@
+2006-07-17  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* configure.in: version to 0.2.1
+
+	* src/convmvfs.cpp: bug fix for readdir
+
+2006-07-17  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* src/convmvfs.cpp: bug fix for readdir
+
+2006-06-30  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* Makefile.in, aclocal.m4, config.h.in, configure, depcomp, install-sh, missing:
+	mistake when import ;)
+
+	* src/Makefile.in: New file.
+
+	* src/Makefile.in, src/convmvfs.cpp: import 0.2 source from gro.clinux
+
+	* configure, missing: New file.
+
+	* configure, missing: import 0.2 source from gro.clinux
+
+	* depcomp, install-sh: New file.
+
+	* NEWS, depcomp, install-sh: import 0.2 source from gro.clinux
+
+	* README.zh_CN.UTF-8, aclocal.m4, config.h.in: New file.
+
+	* ChangeLog, README, README.zh_CN.UTF-8, aclocal.m4, config.h.in, configure.in:
+	import 0.2 source from gro.clinux
+
+	* Makefile.in: New file.
+
+	* Makefile.am, Makefile.in: import 0.2 source from gro.clinux
+
 2006-06-30  hellwolf_misty  <hellwolf_misty@cocteau.freehell.org>
 
 	* NEWS: prepare for release 0.2
