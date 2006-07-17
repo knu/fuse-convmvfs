@@ -4,7 +4,7 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * $Id: convmvfs.cpp,v 1.1.1.2 2006-06-30 16:53:34 hellwolfmisty Exp $
+ * $Id: convmvfs.cpp,v 1.1.1.2.2.1 2006-07-17 04:28:32 hellwolfmisty Exp $
  *
  */
 
@@ -366,6 +366,7 @@ static int convmvfs_opendir(const char *opath, struct fuse_file_info *fi){
 
 static int convmvfs_readdir(const char *opath, void *buf, fuse_fill_dir_t filler,
                          off_t offset, struct fuse_file_info *fi){
+  (void)offset;
   (void)fi;
   string ipath = convmvfs.srcdir + out2in(opath);
 
@@ -373,12 +374,11 @@ static int convmvfs_readdir(const char *opath, void *buf, fuse_fill_dir_t filler
   if( (dir = opendir(ipath.c_str())) == NULL ){
     return -errno;
   }
-  seekdir(dir, offset);
   struct dirent *pdirent;
   pdirent = readdir(dir);
   while ( pdirent != NULL ) {
     filler(buf, in2out(pdirent->d_name).c_str(),
-           NULL, pdirent->d_off);
+           NULL, 0);
     pdirent = readdir( dir );
   }
   closedir(dir);
