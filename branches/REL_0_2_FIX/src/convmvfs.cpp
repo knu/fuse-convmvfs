@@ -4,7 +4,7 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * $Id: convmvfs.cpp,v 1.1.1.2.2.1 2006-07-17 04:28:32 hellwolfmisty Exp $
+ * $Id: convmvfs.cpp,v 1.1.1.2.2.2 2006-07-28 15:30:38 hellwolfmisty Exp $
  *
  */
 
@@ -182,6 +182,10 @@ static string in2out(const char* s){
 static int permission_walk(const char *path, uid_t uid, gid_t gid,
                            int perm_chk, int readlink = 0){
   int rt;
+  //I'm root~~
+  if(uid == 0){
+    return 0;
+  }
   size_t l = strlen(path) + 1;
   char *p = (char*)malloc(l);
   if(p == NULL){
@@ -255,7 +259,7 @@ static int permission_walk(const char *path, uid_t uid, gid_t gid,
     }
   }
 
-  return 0;
+  rt = 0;
 __free_quit:
   free(p);
   return rt;
@@ -395,7 +399,12 @@ static int convmvfs_mknod (const char *opath, mode_t mode, dev_t dev){
   if(st)
     return st;
 
-  return mknod(ipath.c_str(), mode, dev);
+  int rt = mknod(ipath.c_str(), mode, dev);
+  if(rt)return -errno;
+  if(euid == 0){
+    chown(ipath.c_str(), cont->uid, cont->gid);
+  }
+  return 0;
 }
 
 static int convmvfs_mkdir (const char *opath, mode_t mode){
@@ -408,7 +417,12 @@ static int convmvfs_mkdir (const char *opath, mode_t mode){
   if(st)
     return st;
 
-  return mkdir(ipath.c_str(), mode);
+  int rt = mkdir(ipath.c_str(), mode);
+  if(rt)return -errno;
+  if(euid == 0){
+    chown(ipath.c_str(), cont->uid, cont->gid);
+  }
+  return 0;
 }
 
 static int convmvfs_readlink(const char *opath,
@@ -600,9 +614,19 @@ static int convmvfs_access(const char *opath, int mode){
                          );
 }
 
-static int convmvfs_chown(const char *, uid_t, gid_t){
-  //<FIXME>, how to permission check?
-  return -EPERM;
+static int convmvfs_chown(const char *opath, uid_t uid_2set, gid_t gid_2set){
+  string ipath = convmvfs.srcdir + out2in(opath);
+
+  struct fuse_context *cont = fuse_get_context();
+  if(cont->uid == 0){
+    if(chown(ipath.c_str(), uid_2set, gid_2set)){
+      return -errno;
+    }else{
+      return 0;
+    }
+  }else{
+    return -EPERM;
+  }
 }
 
 static int convmvfs_statfs(const char *opath, struct statvfs *buf){
