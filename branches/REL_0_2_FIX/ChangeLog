@@ -1,3 +1,20 @@
+2006-07-28  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* configure.in: version to 0.2.2
+
+	* src/convmvfs.cpp: - root can pass permission_walk without any check
+	- memory leak in permission_walk when success
+	- chown according to cond after mknod and mkdir(only when euid is 0)
+	- enable chown oper(only when euid is 0)
+
+2006-07-17  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* ChangeLog: version update (0.2.1)
+
+	* configure.in: version to 0.2.1
+
+	* src/convmvfs.cpp: bug fix for readdir
+
 2006-07-17  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
 
 	* configure.in: version to 0.2.1
