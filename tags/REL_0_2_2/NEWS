@@ -1,0 +1,12 @@
+What is new in 0.2
+------------------
+* New Implemented functions: opendir readlink mknod mkdir unlink rmdir
+symlink rename link chmod chown(limited) truncate utime write access statfs
+* use more elegant and efficient way to get fd when run read and write
+operations.
+* use permission check to avoid security problems
+
+What is new in 0.1
+------------------
+
+* Implemented functions: read readdir getattr open release

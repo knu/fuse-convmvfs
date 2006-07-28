@@ -1,0 +1,156 @@
+2006-07-28  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* configure.in: version to 0.2.2
+
+	* src/convmvfs.cpp: - root can pass permission_walk without any check
+	- memory leak in permission_walk when success
+	- chown according to cond after mknod and mkdir(only when euid is 0)
+	- enable chown oper(only when euid is 0)
+
+2006-07-17  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* ChangeLog: version update (0.2.1)
+
+	* configure.in: version to 0.2.1
+
+	* src/convmvfs.cpp: bug fix for readdir
+
+2006-07-17  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* configure.in: version to 0.2.1
+
+	* src/convmvfs.cpp: bug fix for readdir
+
+2006-07-17  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* src/convmvfs.cpp: bug fix for readdir
+
+2006-06-30  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* Makefile.in, aclocal.m4, config.h.in, configure, depcomp, install-sh, missing:
+	mistake when import ;)
+
+	* src/Makefile.in: New file.
+
+	* src/Makefile.in, src/convmvfs.cpp: import 0.2 source from gro.clinux
+
+	* configure, missing: New file.
+
+	* configure, missing: import 0.2 source from gro.clinux
+
+	* depcomp, install-sh: New file.
+
+	* NEWS, depcomp, install-sh: import 0.2 source from gro.clinux
+
+	* README.zh_CN.UTF-8, aclocal.m4, config.h.in: New file.
+
+	* ChangeLog, README, README.zh_CN.UTF-8, aclocal.m4, config.h.in, configure.in:
+	import 0.2 source from gro.clinux
+
+	* Makefile.in: New file.
+
+	* Makefile.am, Makefile.in: import 0.2 source from gro.clinux
+
+2006-06-30  hellwolf_misty  <hellwolf_misty@cocteau.freehell.org>
+
+	* NEWS: prepare for release 0.2
+
+	* README: minor changes
+
+	* Makefile.am, README.zh_CN.UTF-8: add README.zh_CN.UTF-8
+
+	* src/convmvfs.cpp:
+	* New Implemented functions: opendir readlink mknod mkdir unlink rmdir
+	symlink rename link chmod chown(limited) truncate utime write access statfs
+	* use more elegant and efficient way to get fd when run read and write
+	operations.
+	* use permission check to avoid security problems
+
+2006-06-12  hellwolf_misty  <hellwolf_misty@cocteau.freehell.org>
+
+	* src/convmvfs.cpp: convmvfs.srcdir[0]
+
+	* ChangeLog: update ChangeLog
+
+	* README: update
+
+	* configure.in: package version to 0.2
+
+	* src/convmvfs.cpp: -v and --version
+	-o srcdir can use relative path now.
+
+	* .cvsignore: merging from REL_0_1_FIX
+
+	* src/convmvfs.cpp: add opers: write mknod mkdir
+	thanks for rickxu
+
+	* .cvsignore: ignore testdir for convenience
+
+2006-06-12  hellwolf_misty  <hellwolf_misty@cocteau.freehell.org>
+
+	* README: update
+
+	* configure.in: package version to 0.2
+
+	* src/convmvfs.cpp: -v and --version
+	-o srcdir can use relative path now.
+
+	* .cvsignore: merging from REL_0_1_FIX
+
+	* src/convmvfs.cpp: add opers: write mknod mkdir
+	thanks for rickxu
+
+	* .cvsignore: ignore testdir for convenience
+
+2006-06-12  hellwolf_misty  <hellwolf_misty@cocteau.freehell.org>
+
+	* src/convmvfs.cpp: -v and --version
+	-o srcdir can use relative path now.
+
+	* .cvsignore: merging from REL_0_1_FIX
+
+	* src/convmvfs.cpp: add opers: write mknod mkdir
+	thanks for rickxu
+
+	* .cvsignore: ignore testdir for convenience
+
+2006-04-27  hellwolf_misty  <hellwolf_misty@cocteau.freehell.org>
+
+	* ChangeLog: update ChangeLog
+
+	* configure.in: no require for glib2
+
+2006-04-27  hellwolf  <hellwolf@seu.edu.cn>
+
+	* configure.in: no require for glib2
+
+2006-04-20  hellwolf  <hellwolf@seu.edu.cn>
+
+	* src/convmvfs.cpp: * set OUTINBUFLEN to 255
+
+	* src/convmvfs.cpp: * no check for srcdir now
+
+	* README: * typo: i10n -> l10n
+
+2006-04-19  hellwolf  <hellwolf@seu.edu.cn>
+
+	* src/convmvfs.cpp: * check if srcdir is empty string
+
+	* README: * how to umount
+	* remind allow_other option
+
+	* .cvsignore, src/.cvsignore: add cvsignore file
+
+	* README: typo: autoreconf -iv
+
+	* AUTHORS: * missing newline
+
+	* ChangeLog, INSTALL, Makefile.am, NEWS, README, configure.in, src/Makefile.am, COPYING, AUTHORS:
+	* Initial Commite
+
+	* src/convmvfs.cpp: * Initial Commit
+
+2006-04-19  ZC Miao  <hellwolf@seu.edu.cn>
+
+	* First Commit
+	* Implemented functions: read readdir getattr open release
