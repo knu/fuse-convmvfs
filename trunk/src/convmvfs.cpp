@@ -4,7 +4,7 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * $Id: convmvfs.cpp,v 1.1.1.2 2006-06-30 16:53:34 hellwolfmisty Exp $
+ * $Id: convmvfs.cpp,v 1.2 2007-02-11 15:50:26 hellwolfmisty Exp $
  *
  */
 
@@ -20,6 +20,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <iconv.h>
+#include <pthread.h>
 
 #include <cstdlib>
 #include <cstdio>
@@ -36,9 +37,9 @@ using namespace std;
  * global vars
  */
 #define FUSE_CONVMVFS_MAGIC 0x4064
-const char* CONVMVFS_DEFAULT_SRCDIR = "/"; /* root dir */
-const char* CONVMVFS_DEFAULT_ICHARSET = "UTF-8";
-const char* CONVMVFS_DEFAULT_OCHARSET = "UTF-8";
+static const char* CONVMVFS_DEFAULT_SRCDIR = "/"; /* root dir */
+static const char* CONVMVFS_DEFAULT_ICHARSET = "UTF-8";
+static const char* CONVMVFS_DEFAULT_OCHARSET = "UTF-8";
 
 struct convmvfs {
   const char *cwd;
@@ -48,10 +49,10 @@ struct convmvfs {
 };
 static struct convmvfs convmvfs;
 
-uid_t euid;
+static uid_t euid;
 gid_t egid;
 
-void init_gvars(){
+static void init_gvars(){
   convmvfs.cwd = get_current_dir_name();
   convmvfs.srcdir = CONVMVFS_DEFAULT_SRCDIR;
   convmvfs.icharset = CONVMVFS_DEFAULT_ICHARSET;
@@ -63,10 +64,8 @@ void init_gvars(){
 
 static struct fuse_operations convmvfs_oper;
 
-iconv_t ic_out2in,ic_in2out;
-
-
-
+static iconv_t ic_out2in,ic_in2out;
+static pthread_mutex_t iconv_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 /*
  * options and usage
@@ -141,9 +140,11 @@ static string outinconv(const char* s, const iconv_t ic){
   string res;
 
   do{
+    pthread_mutex_lock(&iconv_mutex);
     size_t niconv = iconv(ic,
                    &inbuf,&ibleft,
                    &outbuf,&obleft);
+    pthread_mutex_unlock(&iconv_mutex);
     if ( niconv == (size_t) -1 ){
       switch(errno){
       case EINVAL:
@@ -182,6 +183,10 @@ static string in2out(const char* s){
 static int permission_walk(const char *path, uid_t uid, gid_t gid,
                            int perm_chk, int readlink = 0){
   int rt;
+  //I'm root~~
+  if(uid == 0){
+    return 0;
+  }
   size_t l = strlen(path) + 1;
   char *p = (char*)malloc(l);
   if(p == NULL){
@@ -255,7 +260,7 @@ static int permission_walk(const char *path, uid_t uid, gid_t gid,
     }
   }
 
-  return 0;
+  rt = 0;
 __free_quit:
   free(p);
   return rt;
@@ -366,6 +371,7 @@ static int convmvfs_opendir(const char *opath, struct fuse_file_info *fi){
 
 static int convmvfs_readdir(const char *opath, void *buf, fuse_fill_dir_t filler,
                          off_t offset, struct fuse_file_info *fi){
+  (void)offset;
   (void)fi;
   string ipath = convmvfs.srcdir + out2in(opath);
 
@@ -373,12 +379,11 @@ static int convmvfs_readdir(const char *opath, void *buf, fuse_fill_dir_t filler
   if( (dir = opendir(ipath.c_str())) == NULL ){
     return -errno;
   }
-  seekdir(dir, offset);
   struct dirent *pdirent;
   pdirent = readdir(dir);
   while ( pdirent != NULL ) {
     filler(buf, in2out(pdirent->d_name).c_str(),
-           NULL, pdirent->d_off);
+           NULL, 0);
     pdirent = readdir( dir );
   }
   closedir(dir);
@@ -395,7 +400,12 @@ static int convmvfs_mknod (const char *opath, mode_t mode, dev_t dev){
   if(st)
     return st;
 
-  return mknod(ipath.c_str(), mode, dev);
+  int rt = mknod(ipath.c_str(), mode, dev);
+  if(rt)return -errno;
+  if(euid == 0){
+    chown(ipath.c_str(), cont->uid, cont->gid);
+  }
+  return 0;
 }
 
 static int convmvfs_mkdir (const char *opath, mode_t mode){
@@ -408,7 +418,12 @@ static int convmvfs_mkdir (const char *opath, mode_t mode){
   if(st)
     return st;
 
-  return mkdir(ipath.c_str(), mode);
+  int rt = mkdir(ipath.c_str(), mode);
+  if(rt)return -errno;
+  if(euid == 0){
+    chown(ipath.c_str(), cont->uid, cont->gid);
+  }
+  return 0;
 }
 
 static int convmvfs_readlink(const char *opath,
@@ -600,9 +615,19 @@ static int convmvfs_access(const char *opath, int mode){
                          );
 }
 
-static int convmvfs_chown(const char *, uid_t, gid_t){
-  //<FIXME>, how to permission check?
-  return -EPERM;
+static int convmvfs_chown(const char *opath, uid_t uid_2set, gid_t gid_2set){
+  string ipath = convmvfs.srcdir + out2in(opath);
+
+  struct fuse_context *cont = fuse_get_context();
+  if(cont->uid == 0){
+    if(chown(ipath.c_str(), uid_2set, gid_2set)){
+      return -errno;
+    }else{
+      return 0;
+    }
+  }else{
+    return -EPERM;
+  }
 }
 
 static int convmvfs_statfs(const char *opath, struct statvfs *buf){
