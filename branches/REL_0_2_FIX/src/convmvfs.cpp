@@ -4,7 +4,7 @@
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * $Id: convmvfs.cpp,v 1.1.1.2.2.2 2006-07-28 15:30:38 hellwolfmisty Exp $
+ * $Id: convmvfs.cpp,v 1.1.1.2.2.3 2007-02-11 15:28:02 hellwolfmisty Exp $
  *
  */
 
@@ -20,6 +20,7 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <iconv.h>
+#include <pthread.h>
 
 #include <cstdlib>
 #include <cstdio>
@@ -36,9 +37,9 @@ using namespace std;
  * global vars
  */
 #define FUSE_CONVMVFS_MAGIC 0x4064
-const char* CONVMVFS_DEFAULT_SRCDIR = "/"; /* root dir */
-const char* CONVMVFS_DEFAULT_ICHARSET = "UTF-8";
-const char* CONVMVFS_DEFAULT_OCHARSET = "UTF-8";
+static const char* CONVMVFS_DEFAULT_SRCDIR = "/"; /* root dir */
+static const char* CONVMVFS_DEFAULT_ICHARSET = "UTF-8";
+static const char* CONVMVFS_DEFAULT_OCHARSET = "UTF-8";
 
 struct convmvfs {
   const char *cwd;
@@ -48,10 +49,10 @@ struct convmvfs {
 };
 static struct convmvfs convmvfs;
 
-uid_t euid;
+static uid_t euid;
 gid_t egid;
 
-void init_gvars(){
+static void init_gvars(){
   convmvfs.cwd = get_current_dir_name();
   convmvfs.srcdir = CONVMVFS_DEFAULT_SRCDIR;
   convmvfs.icharset = CONVMVFS_DEFAULT_ICHARSET;
@@ -63,10 +64,8 @@ void init_gvars(){
 
 static struct fuse_operations convmvfs_oper;
 
-iconv_t ic_out2in,ic_in2out;
-
-
-
+static iconv_t ic_out2in,ic_in2out;
+static pthread_mutex_t iconv_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 /*
  * options and usage
@@ -141,9 +140,11 @@ static string outinconv(const char* s, const iconv_t ic){
   string res;
 
   do{
+    pthread_mutex_lock(&iconv_mutex);
     size_t niconv = iconv(ic,
                    &inbuf,&ibleft,
                    &outbuf,&obleft);
+    pthread_mutex_unlock(&iconv_mutex);
     if ( niconv == (size_t) -1 ){
       switch(errno){
       case EINVAL:
