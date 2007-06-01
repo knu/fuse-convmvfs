@@ -1,10 +1,10 @@
-/* (C) 2006 ZC Miao <hellwolf@seu.edu.cn>
+/* (C) 2006 ZC Miao <hellwolf.misty@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  *
- * $Id: convmvfs.cpp,v 1.2 2007-02-11 15:50:26 hellwolfmisty Exp $
+ * $Id: convmvfs.cpp,v 1.3 2007-06-01 02:25:49 hellwolfmisty Exp $
  *
  */
 
