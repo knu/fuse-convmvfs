@@ -1,3 +1,26 @@
+2007-06-01  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* Makefile.am, configure.in, src/convmvfs.cpp:
+	update version and authors info
+
+2007-02-13  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* AUTHORS: change mail
+
+2007-02-11  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
+
+	* ChangeLog: update
+
+	* ChangeLog, Makefile.am, configure.in, src/.cvsignore, src/Makefile.in, src/convmvfs.cpp, test/music.tar, test/threadsafe.pl, .cvsignore:
+	merged from 0.2.fix
+
+	* src/convmvfs.cpp: merge patch from baz1
+
+	* test/music.tar, test/threadsafe.pl: New file.
+
+	* test/music.tar, test/threadsafe.pl, Makefile.am, configure.in:
+	add test
+
 2007-02-11  hellwolfmisty  <hellwolfmisty@cocteau.freehell.org>
 
 	* ChangeLog, Makefile.am, configure.in, src/.cvsignore, src/Makefile.in, src/convmvfs.cpp, test/music.tar, test/threadsafe.pl, .cvsignore:
