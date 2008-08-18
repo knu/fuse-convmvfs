@@ -1,0 +1,144 @@
+.TH CONVMVFS 1 "October 3, 2007"
+.SH NAME
+convmvfs \- utility that mirrors a whole filesystem tree from one charset to another.
+.SH SYNOPSIS
+.BI "convmvfs mountpoint [ " options " ]"
+.SH DESCRIPTION
+This manual page documents briefly the
+.B convmvfs
+command.
+.PP
+.B convmvfs
+is a FUSE (File System in Userspace) utility that transparently mirrors a
+filesystem tree converting the filenames from one charset to another
+on the fly. Only the names of files and directories are converted, the file
+content remains intact. The mirrored tree is mounted at the given mountpoint.
+.SH OPTIONS
+.SS General options
+.TP
+.BI "\-o " opt "[," opt "...]"
+mount options
+.TP
+.B \-h, \-\-help
+print help
+.TP
+.B \-V, \-\-version
+print version
+.TP
+.B \-h, \-\-help
+show summary of options
+.SS FUSE options
+.TP
+.B  \-d, \-o debug
+enable debug output (implies
+.BR \-f )
+.TP
+.B  \-f
+foreground operation
+.TP
+.B  \-s
+disable multi-threaded operation
+.TP
+.B  \-o
+Mount options are specified with a
+.B \-o
+flag followed by a comma separated list of options.
+The following options are recognized:
+.RS
+.TP
+.B  allow_other
+allow access to other users
+.TP
+.B  allow_root
+allow access to root
+.TP
+.B  nonempty
+allow mounts over non-empty file/dir
+.TP
+.B default_permissions
+enable permission checking by kernel
+.TP
+.BI fsname= NAME
+set filesystem name
+.TP
+.B large_read
+issue large read requests (2.4 only)
+.TP
+.BI max_read= N
+set maximum size of read requests
+.TP
+.B hard_remove
+immediate removal (don't hide files)
+.TP
+.B use_ino
+let filesystem set inode numbers
+.TP
+.B readdir_ino
+try to fill in d_ino in readdir
+.TP
+.B direct_io
+use direct I/O
+.TP
+.B kernel_cache
+cache files in kernel
+.TP
+.BI umask= M
+set file permissions (octal)
+.TP
+.BI uid= N
+set file owner
+.TP
+.BI gid= N
+set file group
+.TP
+.BI entry_timeout= T
+cache timeout for names (1.0s)
+.TP
+.BI negative_timeout= T
+cache timeout for deleted names (0.0s)
+.TP
+.BI attr_timeout= T
+cache timeout for attributes (1.0s)
+.TP
+.BI srcdir= PATH
+which directory to convert
+.TP
+.BI icharset= CHARSET
+charset used in srcdir
+.TP
+.BI ocharset= CHARSET
+charset used in mounted filesystem
+.RE
+.SH NOTES
+If you use a normal user account to mount the file system be sure to have 
+r/w permissions to
+.BR /dev/fuse .
+.PP
+Use
+.B iconv \-\-list
+to see which charsets are supported.
+.PP
+To allow other users to access the mount point use
+.B allow_other
+option.
+.PP
+.B IMPORTANT:
+if mount point and srcdir were the same dir, readdir call
+would enter dead loop.
+.B BE SURE TO AVOID THIS SITUATION!
+.SH SAMPLE USE
+to mount:
+.br
+.B $ convmvfs /ftp/pub_gbk \-o srcdir=/ftp/pub,icharset=utf8,ocharset=gbk
+.PP
+to unmount:
+.br
+.B $ fusermount -u /ftp/pub_gbk
+.SH SEE ALSO
+.BR fusermount (1),
+.BR mount (8)
+.SH AUTHOR
+convmvfs was written by Z.C. Miao <hellwolf.misty@gmail.com>.
+.PP
+This manual page was written by Stanislav Maslovski <stanislav.maslovski@gmail.com>,
+for the Debian project (but may be used by others).
