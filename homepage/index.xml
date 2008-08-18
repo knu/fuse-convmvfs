@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+<title>fuse-convmvfs</title>
+<link>http://www.tiddlywiki.com/</link>
+<description>a userland file system to convert filename charset</description>
+<language>en-us</language>
+<copyright>Copyright 2008 ZC Miao</copyright>
+<pubDate>Sun, 03 Aug 2008 14:16:00 GMT</pubDate>
+<lastBuildDate>Sun, 03 Aug 2008 14:16:00 GMT</lastBuildDate>
+<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+<generator>TiddlyWiki 2.0.11</generator>
+<item>
+<title>News</title>
+<description>Here you can find a list of project news, you can always find infomation about the latest release here.&lt;br /&gt;&lt;br /&gt;Full list of news, latest first:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;* [[Debian officially included fuse-convmvfs]]&lt;br /&gt;* [[fuse-convmvfs 0.2.4 released]]&lt;br /&gt;* [[fuse-convmvfs 0.2.3 released]]&lt;br /&gt;* [[website of fuse-convmvfs is up]]&lt;br /&gt;* [[fuse-convmvfs 0.2.2 released]]</description>
+<link>http://www.tiddlywiki.com/#News</link>
+<pubDate>Sun, 03 Aug 2008 14:15:49 GMT</pubDate>
+</item>
+<item>
+<title>Debian officially included fuse-convmvfs</title>
+<description>Thanks to Stanislav Maslovski and Anthony Fok, fuse-convmvfs is now officially included into Debian.&lt;br /&gt;&lt;br /&gt;You can find the package at [1] and the bugreports (if there are any) can be found at [2].&lt;br /&gt;&lt;br /&gt;[1] http://packages.debian.org/sid/fuse-convmvfs&lt;br /&gt;[2] http://bugs.debian.org/fuse-convmvfs&lt;br /&gt;</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5BDebian%20officially%20included%20fuse-convmvfs%5D%5D</link>
+<pubDate>Sun, 03 Aug 2008 14:15:44 GMT</pubDate>
+</item>
+<item>
+<title>fuse-convmvfs 0.2.4 released</title>
+<description>fuse-convmvfs 0.2.4 released, this is a minor version of the 0.2.x serials to fix some criticle bugs.&lt;br /&gt;latest ChangeLog&lt;br /&gt;&lt;br /&gt;2007-06-01  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;	* Makefile.am, configure.in, src/convmvfs.cpp:&lt;br /&gt;	update version and authors info&lt;br /&gt;&lt;br /&gt;2007-02-13  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;	* AUTHORS: change mail&lt;br /&gt;&lt;br /&gt;you can download it from here :&lt;br /&gt;http://downloads.sourceforge.net/fuse-convmvfs/fuse-convmvfs-0.2.4.tar.gz</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5Bfuse-convmvfs%200.2.4%20released%5D%5D</link>
+<pubDate>Wed, 30 Jul 2008 10:33:00 GMT</pubDate>
+</item>
+<item>
+<title>fuse-convmvfs 0.2.3 released</title>
+<description>fuse-convmvfs 0.2.3 released, this is a minor version of the 0.2.x serials to fix some criticle bugs.&lt;br /&gt;latest ChangeLog&lt;br /&gt;2007-02-11  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * ChangeLog, Makefile.am, configure.in, src/.cvsignore, src/Makefile.in, src/convmvfs.cpp, test/music.tar, test/threadsafe.pl, .cvsignore:&lt;br /&gt;        merged from 0.2.fix&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: merge patch from baz1&lt;br /&gt;&lt;br /&gt;        * test/music.tar, test/threadsafe.pl: New file.&lt;br /&gt;&lt;br /&gt;        * test/music.tar, test/threadsafe.pl, Makefile.am, configure.in:&lt;br /&gt;        add test&lt;br /&gt;&lt;br /&gt;you can download it from here :&lt;br /&gt;http://downloads.sourceforge.net/fuse-convmvfs/fuse-convmvfs-0.2.3.tar.gz</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5Bfuse-convmvfs%200.2.3%20released%5D%5D</link>
+<pubDate>Fri, 01 Jun 2007 02:39:00 GMT</pubDate>
+</item>
+<item>
+<title>MainMenu</title>
+<description>[[News]]&lt;br /&gt;[[Welcome]]&lt;br /&gt;[[Download]]&lt;br /&gt;[[Contact]]&lt;br /&gt;[[RSSFeed|http://fuse-convmvfs.sourceforge.net/index.xml]]&lt;br /&gt;&lt;br /&gt;[[fuse-convmvfs]]&lt;br /&gt;Copyright ©&lt;br /&gt;2006 - 2007&lt;br /&gt;[[ZC Miao]]</description>
+<link>http://www.tiddlywiki.com/#MainMenu</link>
+<pubDate>Sun, 25 Feb 2007 11:07:00 GMT</pubDate>
+</item>
+<item>
+<title>ZC Miao</title>
+<description>[[ZC Miao]] is abbreviation of my chinese name:缪志澄&lt;br /&gt;My nick name is [[hellwolf]]&lt;br /&gt;Feel free to contact me:&lt;br /&gt;* Email: hellwolf.misty@gmail.com&lt;br /&gt;* Gtalk: hellwolf.misty@gmail.com&lt;br /&gt;&lt;br /&gt;And I'm working on the FedoraCN, if you're interesting on it, join us now!</description>
+<category>Contact</category>
+<link>http://www.tiddlywiki.com/#%5B%5BZC%20Miao%5D%5D</link>
+<pubDate>Sun, 25 Feb 2007 11:05:00 GMT</pubDate>
+</item>
+<item>
+<title>AdvancedOptions</title>
+<description>&lt;&lt;option chkGenerateAnRssFeed&gt;&gt; GenerateAnRssFeed&lt;br /&gt;&lt;&lt;option chkOpenInNewWindow&gt;&gt; OpenLinksInNewWindow&lt;br /&gt;&lt;&lt;option chkSaveEmptyTemplate&gt;&gt; SaveEmptyTemplate&lt;br /&gt;&lt;&lt;option chkToggleLinks&gt;&gt; Clicking on links to tiddlers that are already open causes them to close&lt;br /&gt;^^(override with Control or other modifier key)^^&lt;br /&gt;&lt;&lt;option chkHttpReadOnly&gt;&gt; HideEditingFeatures when viewed over HTTP&lt;br /&gt;&lt;&lt;option chkForceMinorUpdate&gt;&gt; Treat edits as MinorChanges by preserving date and time&lt;br /&gt;^^(override with Shift key when clicking 'done' or by pressing Ctrl-Shift-Enter^^&lt;br /&gt;&lt;&lt;option chkConfirmDelete&gt;&gt; ConfirmBeforeDeleting&lt;br /&gt;Maximum number of lines in a tiddler edit box: &lt;&lt;option txtMaxEditRows&gt;&gt;&lt;br /&gt;Folder name for backup files: &lt;&lt;option txtBackupFolder&gt;&gt;&lt;br /&gt;</description>
+<link>http://www.tiddlywiki.com/#AdvancedOptions</link>
+<pubDate>Sun, 11 Feb 2007 16:10:00 GMT</pubDate>
+</item>
+<item>
+<title>ChangeLog</title>
+<description>2007-02-11  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * ChangeLog, Makefile.am, configure.in, src/.cvsignore, src/Makefile.in, src/convmvfs.cpp, test/music.tar, test/threadsafe.pl, .cvsignore:&lt;br /&gt;        merged from 0.2.fix&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: merge patch from baz1&lt;br /&gt;&lt;br /&gt;        * test/music.tar, test/threadsafe.pl: New file.&lt;br /&gt;&lt;br /&gt;        * test/music.tar, test/threadsafe.pl, Makefile.am, configure.in:&lt;br /&gt;        add test&lt;br /&gt;&lt;br /&gt;2007-02-10  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * .cvsignore, src/.cvsignore: New file.&lt;br /&gt;&lt;br /&gt;        * .cvsignore, src/.cvsignore: add cvsignore&lt;br /&gt;&lt;br /&gt;2006-07-28  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * ChangeLog: update&lt;br /&gt;&lt;br /&gt;        * configure.in: version to 0.2.2&lt;br /&gt;&lt;br /&gt;        * src/Makefile.in: ...fuck&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: - root can pass permission_walk without any check&lt;br /&gt;        - memory leak in permission_walk when success&lt;br /&gt;        - chown according to cond after mknod and mkdir(only when euid is 0)&lt;br /&gt;        - enable chown oper(only when euid is 0)&lt;br /&gt;&lt;br /&gt;2006-07-28  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * configure.in: version to 0.2.2&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: - root can pass permission_walk without any check&lt;br /&gt;        - memory leak in permission_walk when success&lt;br /&gt;        - chown according to cond after mknod and mkdir(only when euid is 0)&lt;br /&gt;        - enable chown oper(only when euid is 0)&lt;br /&gt;&lt;br /&gt;2006-07-17  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * ChangeLog: version update (0.2.1)&lt;br /&gt;&lt;br /&gt;        * configure.in: version to 0.2.1&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: bug fix for readdir&lt;br /&gt;&lt;br /&gt;2006-07-17  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * configure.in: version to 0.2.1&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: bug fix for readdir&lt;br /&gt;&lt;br /&gt;2006-07-17  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: bug fix for readdir&lt;br /&gt;&lt;br /&gt;2006-06-30  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * Makefile.in, aclocal.m4, config.h.in, configure, depcomp, install-sh, missing:&lt;br /&gt;        mistake when import ;)&lt;br /&gt;&lt;br /&gt;        * src/Makefile.in: New file.&lt;br /&gt;&lt;br /&gt;        * src/Makefile.in, src/convmvfs.cpp: import 0.2 source from gro.clinux&lt;br /&gt;&lt;br /&gt;        * configure, missing: New file.&lt;br /&gt;&lt;br /&gt;        * configure, missing: import 0.2 source from gro.clinux&lt;br /&gt;&lt;br /&gt;        * depcomp, install-sh: New file.&lt;br /&gt;&lt;br /&gt;        * NEWS, depcomp, install-sh: import 0.2 source from gro.clinux&lt;br /&gt;&lt;br /&gt;        * README.zh_CN.UTF-8, aclocal.m4, config.h.in: New file.&lt;br /&gt;&lt;br /&gt;        * ChangeLog, README, README.zh_CN.UTF-8, aclocal.m4, config.h.in, configure.in:&lt;br /&gt;        import 0.2 source from gro.clinux&lt;br /&gt;&lt;br /&gt;        * Makefile.in: New file.&lt;br /&gt;&lt;br /&gt;        * Makefile.am, Makefile.in: import 0.2 source from gro.clinux&lt;br /&gt;&lt;br /&gt;2006-06-30  hellwolf_misty  &lt;hellwolf_misty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * NEWS: prepare for release 0.2&lt;br /&gt;&lt;br /&gt;        * README: minor changes&lt;br /&gt;&lt;br /&gt;        * Makefile.am, README.zh_CN.UTF-8: add README.zh_CN.UTF-8&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp:&lt;br /&gt;        * New Implemented functions: opendir readlink mknod mkdir unlink rmdir&lt;br /&gt;        symlink rename link chmod chown(limited) truncate utime write access statfs&lt;br /&gt;        * use more elegant and efficient way to get fd when run read and write&lt;br /&gt;        operations.&lt;br /&gt;        * use permission check to avoid security problems&lt;br /&gt;&lt;br /&gt;2006-06-12  hellwolf_misty  &lt;hellwolf_misty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: convmvfs.srcdir[0]&lt;br /&gt;&lt;br /&gt;        * ChangeLog: update ChangeLog&lt;br /&gt;&lt;br /&gt;        * README: update&lt;br /&gt;&lt;br /&gt;        * configure.in: package version to 0.2&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: -v and --version&lt;br /&gt;        -o srcdir can use relative path now.&lt;br /&gt;&lt;br /&gt;        * .cvsignore: merging from REL_0_1_FIX&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: add opers: write mknod mkdir&lt;br /&gt;        thanks for rickxu&lt;br /&gt;&lt;br /&gt;        * .cvsignore: ignore testdir for convenience&lt;br /&gt;&lt;br /&gt;2006-06-12  hellwolf_misty  &lt;hellwolf_misty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * README: update&lt;br /&gt;&lt;br /&gt;        * configure.in: package version to 0.2&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: -v and --version&lt;br /&gt;        -o srcdir can use relative path now.&lt;br /&gt;&lt;br /&gt;        * .cvsignore: merging from REL_0_1_FIX&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: add opers: write mknod mkdir&lt;br /&gt;        thanks for rickxu&lt;br /&gt;&lt;br /&gt;        * .cvsignore: ignore testdir for convenience&lt;br /&gt;&lt;br /&gt;2006-06-12  hellwolf_misty  &lt;hellwolf_misty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: -v and --version&lt;br /&gt;        -o srcdir can use relative path now.&lt;br /&gt;&lt;br /&gt;        * .cvsignore: merging from REL_0_1_FIX&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: add opers: write mknod mkdir&lt;br /&gt;        thanks for rickxu&lt;br /&gt;&lt;br /&gt;        * .cvsignore: ignore testdir for convenience&lt;br /&gt;&lt;br /&gt;2006-04-27  hellwolf_misty  &lt;hellwolf_misty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * ChangeLog: update ChangeLog&lt;br /&gt;&lt;br /&gt;        * configure.in: no require for glib2&lt;br /&gt;&lt;br /&gt;2006-04-27  hellwolf  &lt;hellwolf@seu.edu.cn&gt;&lt;br /&gt;&lt;br /&gt;        * configure.in: no require for glib2&lt;br /&gt;&lt;br /&gt;2006-04-20  hellwolf  &lt;hellwolf@seu.edu.cn&gt;&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: * set OUTINBUFLEN to 255&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: * no check for srcdir now&lt;br /&gt;&lt;br /&gt;        * README: * typo: i10n -&gt; l10n&lt;br /&gt;&lt;br /&gt;2006-04-19  hellwolf  &lt;hellwolf@seu.edu.cn&gt;&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: * check if srcdir is empty string&lt;br /&gt;&lt;br /&gt;        * README: * how to umount&lt;br /&gt;        * remind allow_other option&lt;br /&gt;&lt;br /&gt;        * .cvsignore, src/.cvsignore: add cvsignore file&lt;br /&gt;&lt;br /&gt;        * README: typo: autoreconf -iv&lt;br /&gt;&lt;br /&gt;        * AUTHORS: * missing newline&lt;br /&gt;&lt;br /&gt;        * ChangeLog, INSTALL, Makefile.am, NEWS, README, configure.in, src/Makefile.am, COPYING, AUTHORS:&lt;br /&gt;        * Initial Commite&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: * Initial Commit&lt;br /&gt;&lt;br /&gt;2006-04-19  ZC Miao  &lt;hellwolf@seu.edu.cn&gt;&lt;br /&gt;&lt;br /&gt;        * First Commit&lt;br /&gt;        * Implemented functions: read readdir getattr open release&lt;br /&gt;</description>
+<link>http://www.tiddlywiki.com/#ChangeLog</link>
+<pubDate>Sun, 11 Feb 2007 15:56:00 GMT</pubDate>
+</item>
+<item>
+<title>FedoraCN</title>
+<description>''fedora.cn'' is a project intended to&lt;br /&gt;*provide additional packages to fedora user&lt;br /&gt;*help chinese user to resolve problems of fedora&lt;br /&gt;*submit more packages to fedora extras.&lt;br /&gt;&lt;br /&gt;* ''fedora.cn homepage'' http://www.fedora.cn/&lt;br /&gt;* ''fedora.cn project home'' https://gro.clinux.org/projects/fedora/&lt;br /&gt;* ''fedora.cn yum repository'' ftp://ftp.fedora.cn/pub/fedora-cn/&lt;br /&gt;* ''fedora.cn irc channel'' freenode#fedora-cn&lt;br /&gt;* ''Mailing list''&lt;br /&gt;**user list: http://groups.google.com/group/fedora-cn&lt;br /&gt;**developerlist: http://groups.google.com/group/fedora-cn-devel</description>
+<category>Contact</category>
+<link>http://www.tiddlywiki.com/#FedoraCN</link>
+<pubDate>Sun, 06 Aug 2006 02:05:00 GMT</pubDate>
+</item>
+<item>
+<title>Welcome</title>
+<description>This is the website of [[fuse-convmvfs]]. &lt;br /&gt;&lt;br /&gt;If you didn't know what is it, you may find it here:&lt;br /&gt;* WhatIsIt&lt;br /&gt;* [[Motivation]]&lt;br /&gt;* [[Install]]&lt;br /&gt;* HowToUse&lt;br /&gt;And if you thought it's useful to you just [[Download]] it freely.&lt;br /&gt;&lt;br /&gt;//And this site is powered up by TiddlyWiki//</description>
+<link>http://www.tiddlywiki.com/#Welcome</link>
+<pubDate>Sun, 30 Jul 2006 07:41:00 GMT</pubDate>
+</item>
+<item>
+<title>fuse-convmvfs</title>
+<description>WhatIsIt&lt;br /&gt;[[Motivation]]&lt;br /&gt;[[Install]]&lt;br /&gt;HowToUse&lt;br /&gt;</description>
+<category>Doc</category>
+<link>http://www.tiddlywiki.com/#fuse-convmvfs</link>
+<pubDate>Sun, 30 Jul 2006 07:41:00 GMT</pubDate>
+</item>
+<item>
+<title>Motivation</title>
+<description>[[Convmv|http://osx.freshmeat.net/projects/convmv/]] is a utility to converts filenames (not file content), &lt;br /&gt;directories, and even whole filesystems to a different encoding. Inspired by this tool, born was the convmvfs which mirror a whole filesystem tree from one charset to another.&lt;br /&gt;&lt;br /&gt;For example, in China there's a National Standard called GB2312 which defined a charset to present most of the Chinese character. And many ftp client used in China only accept and show filename in GB2312. But in *nix world i18n is more acceptable than l10n so many *nix server use UTF-8.&lt;br /&gt;For example, there's a linux hosted box run a ftp server app on it. The ftp server export /ftp/pub to anonymous access in which all filenames are in UTF-8 charset. Now we can make a &lt;br /&gt;directory called /ftp/pub_gb2312 and use our convmvfs tool to mount a special fuse filesystem on /ftp/pub_gb2312, which hotly convert the filename in /ftp/pub from UTF-8 to GB2312&lt;br /&gt;but leave the contant unchanged.</description>
+<category>Doc</category>
+<link>http://www.tiddlywiki.com/#Motivation</link>
+<pubDate>Sun, 30 Jul 2006 07:36:00 GMT</pubDate>
+</item>
+<item>
+<title>WhatIsIt</title>
+<description>fuse-convmvfs is a filesystem client use the FUSE(Filesystem in ~USErspace) interface to convert file name from one charset to another.</description>
+<link>http://www.tiddlywiki.com/#WhatIsIt</link>
+<pubDate>Sun, 30 Jul 2006 07:36:00 GMT</pubDate>
+</item>
+<item>
+<title>HowToUse</title>
+<description>Once convmvfs is installed running it is very simple:&lt;br /&gt;{{{&lt;br /&gt;usage: convmvfs mountpoint [options]&lt;br /&gt;&lt;br /&gt;general options:&lt;br /&gt;    -o opt,[opt...]        mount options&lt;br /&gt;    -h   --help            print help&lt;br /&gt;    -V   --version         print version&lt;br /&gt;&lt;br /&gt;FUSE options:&lt;br /&gt;    -d   -o debug          enable debug output (implies -f)&lt;br /&gt;    -f                     foreground operation&lt;br /&gt;    -s                     disable multi-threaded operation&lt;br /&gt;&lt;br /&gt;    -o allow_other         allow access to other users&lt;br /&gt;    -o allow_root          allow access to root&lt;br /&gt;    -o nonempty            allow mounts over non-empty file/dir&lt;br /&gt;    -o default_permissions enable permission checking by kernel&lt;br /&gt;    -o fsname=NAME         set filesystem name&lt;br /&gt;    -o large_read          issue large read requests (2.4 only)&lt;br /&gt;    -o max_read=N          set maximum size of read requests&lt;br /&gt;&lt;br /&gt;    -o hard_remove         immediate removal (don't hide files)&lt;br /&gt;    -o use_ino             let filesystem set inode numbers&lt;br /&gt;    -o readdir_ino         try to fill in d_ino in readdir&lt;br /&gt;    -o direct_io           use direct I/O&lt;br /&gt;    -o kernel_cache        cache files in kernel&lt;br /&gt;    -o umask=M             set file permissions (octal)&lt;br /&gt;    -o uid=N               set file owner&lt;br /&gt;    -o gid=N               set file group&lt;br /&gt;    -o entry_timeout=T     cache timeout for names (1.0s)&lt;br /&gt;    -o negative_timeout=T  cache timeout for deleted names (0.0s)&lt;br /&gt;    -o attr_timeout=T      cache timeout for attributes (1.0s)&lt;br /&gt;&lt;br /&gt;CONVMVFS options:&lt;br /&gt;    -o srcdir=PATH         which directory to convert&lt;br /&gt;    -o icharset=CHARSET    charset used in srcdir&lt;br /&gt;    -o ocharset=CHARSET    charset used in mounted filesystem&lt;br /&gt;}}}&lt;br /&gt;Note:&lt;br /&gt;* If you use normal user to mount file system be sure to have &lt;br /&gt;r/w permision to /dev/fuse.&lt;br /&gt;* use `iconv --list` to see which charsets are supported.&lt;br /&gt;* to allow other user to access the mount point use allow_other option&lt;br /&gt;* IMPORTANT: if mount point and srcdir was the same dir, readdir oper&lt;br /&gt;  would enter dead loop. BE SURE TO AVOID THIS SITUATION!&lt;br /&gt;&lt;br /&gt;Sample use:&lt;br /&gt;* to mount&lt;br /&gt;{{{&lt;br /&gt;$convmvfs /ftp/pub_gbk -o srcdir=/ftp/pub, icharset=utf8,ocharset=gbk&lt;br /&gt;}}}&lt;br /&gt;* to umount&lt;br /&gt;{{{&lt;br /&gt;$fusermount -u /ftp/pub_gbk&lt;br /&gt;}}}&lt;br /&gt;</description>
+<link>http://www.tiddlywiki.com/#HowToUse</link>
+<pubDate>Sun, 30 Jul 2006 07:35:00 GMT</pubDate>
+</item>
+<item>
+<title>website of fuse-convmvfs is up</title>
+<description>Thanks to TiddlyWiki tool, without which a lazy dog like me can not power up a website so quickly ;)&lt;br /&gt;&lt;br /&gt;project homepage:&lt;br /&gt;http://fuse-convmvfs.sourceforge.net/</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5Bwebsite%20of%20fuse-convmvfs%20is%20up%5D%5D</link>
+<pubDate>Sun, 30 Jul 2006 07:29:00 GMT</pubDate>
+</item>
+<item>
+<title>SiteTitle</title>
+<description>''fuse-convmvfs''</description>
+<link>http://www.tiddlywiki.com/#SiteTitle</link>
+<pubDate>Sun, 30 Jul 2006 07:25:00 GMT</pubDate>
+</item>
+<item>
+<title>TiddlyWiki</title>
+<description>TiddlyWiki is the truly awesome software created by Jeremy Ruston to which this tutorial introduces you. You can find the TiddlyWiki home site at http://www.tiddlywiki.com &lt;br /&gt;&lt;br /&gt;This is one of the most efficient ways of communicating that I've ever seen, and it's a lot of fun to use and write for too!</description>
+<link>http://www.tiddlywiki.com/#TiddlyWiki</link>
+<pubDate>Sun, 30 Jul 2006 07:24:00 GMT</pubDate>
+</item>
+<item>
+<title>Contact</title>
+<description>Leftside are something about this project and me ;)&lt;br /&gt;&lt;br /&gt;If you're interesting on this project please contact [[ZC Miao]].</description>
+<link>http://www.tiddlywiki.com/#Contact</link>
+<pubDate>Sun, 30 Jul 2006 07:21:00 GMT</pubDate>
+</item>
+<item>
+<title>Install</title>
+<description>First you need to download FUSE 2.5 or later from:&lt;br /&gt;  http://fuse.sourceforge.net&lt;br /&gt;After installing FUSE, compile convmvfs the usual way:&lt;br /&gt;{{{&lt;br /&gt;$./configure&lt;br /&gt;$make&lt;br /&gt;#make install&lt;br /&gt;}}}&lt;br /&gt;And you are ready to go.You can now type 'convmvfs --help&quot; to get help&lt;br /&gt;infomation.&lt;br /&gt;&lt;br /&gt;If checking out from CVS for the first time also do&lt;br /&gt;'autoreconf -iv' before doing './configure'.</description>
+<link>http://www.tiddlywiki.com/#Install</link>
+<pubDate>Sun, 30 Jul 2006 07:17:00 GMT</pubDate>
+</item>
+<item>
+<title>Download</title>
+<description>You can download fuse-convmvfs tarballs from [[here|http://sourceforge.net/project/showfiles.php?group_id=166276]]&lt;br /&gt;&lt;br /&gt;And if you're a fedora user, you can use yum repository of FedoraCN which also contains the latest stable version of fuse-convmvfs&lt;br /&gt;</description>
+<link>http://www.tiddlywiki.com/#Download</link>
+<pubDate>Sun, 30 Jul 2006 07:14:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
