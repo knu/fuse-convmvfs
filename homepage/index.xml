@@ -6,36 +6,57 @@
 <description>a userland file system to convert filename charset</description>
 <language>en-us</language>
 <copyright>Copyright 2008 ZC Miao</copyright>
-<pubDate>Sun, 03 Aug 2008 14:16:00 GMT</pubDate>
-<lastBuildDate>Sun, 03 Aug 2008 14:16:00 GMT</lastBuildDate>
+<pubDate>Tue, 19 Aug 2008 00:16:52 GMT</pubDate>
+<lastBuildDate>Tue, 19 Aug 2008 00:16:52 GMT</lastBuildDate>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 <generator>TiddlyWiki 2.0.11</generator>
 <item>
 <title>News</title>
-<description>Here you can find a list of project news, you can always find infomation about the latest release here.&lt;br /&gt;&lt;br /&gt;Full list of news, latest first:&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;* [[Debian officially included fuse-convmvfs]]&lt;br /&gt;* [[fuse-convmvfs 0.2.4 released]]&lt;br /&gt;* [[fuse-convmvfs 0.2.3 released]]&lt;br /&gt;* [[website of fuse-convmvfs is up]]&lt;br /&gt;* [[fuse-convmvfs 0.2.2 released]]</description>
+<description>Here you can find a list of project news, you can always find infomation about the latest release here.</description>
 <link>http://www.tiddlywiki.com/#News</link>
-<pubDate>Sun, 03 Aug 2008 14:15:49 GMT</pubDate>
+<pubDate>Tue, 19 Aug 2008 00:16:45 GMT</pubDate>
 </item>
 <item>
-<title>Debian officially included fuse-convmvfs</title>
-<description>Thanks to Stanislav Maslovski and Anthony Fok, fuse-convmvfs is now officially included into Debian.&lt;br /&gt;&lt;br /&gt;You can find the package at [1] and the bugreports (if there are any) can be found at [2].&lt;br /&gt;&lt;br /&gt;[1] http://packages.debian.org/sid/fuse-convmvfs&lt;br /&gt;[2] http://bugs.debian.org/fuse-convmvfs&lt;br /&gt;</description>
+<title>2008-08-19 - Version Control System migrated from cvs to svn</title>
+<description>Version Control System for fuse-convmvfs has been migrated from cvs to svn, for more information, please check:&lt;br /&gt;https://sourceforge.net/svn/?group_id=166276&lt;br /&gt;&lt;br /&gt;A git repository for trunk source code, which may be newer than svn repository of fuse-convmvfs at sourceforge, is also available from:&lt;br /&gt;Repository: http://linuxfire.com.cn/~hellwolf/git/fuse-convmvfs.git/&lt;br /&gt;Gitweb: http://linuxfire.com.cn/~hellwolf/cgi-bin/gitweb.cgi?p=fuse-convmvfs.git;a=summary&lt;br /&gt;</description>
 <category>News</category>
-<link>http://www.tiddlywiki.com/#%5B%5BDebian%20officially%20included%20fuse-convmvfs%5D%5D</link>
-<pubDate>Sun, 03 Aug 2008 14:15:44 GMT</pubDate>
+<link>http://www.tiddlywiki.com/#%5B%5B2008-08-19%20-%20Version%20Control%20System%20migrated%20from%20cvs%20to%20svn%5D%5D</link>
+<pubDate>Tue, 19 Aug 2008 00:16:42 GMT</pubDate>
 </item>
 <item>
-<title>fuse-convmvfs 0.2.4 released</title>
+<title>2006-07-30 - website of fuse-convmvfs is up</title>
+<description>Thanks to TiddlyWiki tool, without which a lazy dog like me can not power up a website so quickly ;)&lt;br /&gt;&lt;br /&gt;project homepage:&lt;br /&gt;http://fuse-convmvfs.sourceforge.net/</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5B2006-07-30%20-%20website%20of%20fuse-convmvfs%20is%20up%5D%5D</link>
+<pubDate>Tue, 19 Aug 2008 00:06:00 GMT</pubDate>
+</item>
+<item>
+<title>2007-06-01 - fuse-convmvfs 0.2.4 released</title>
 <description>fuse-convmvfs 0.2.4 released, this is a minor version of the 0.2.x serials to fix some criticle bugs.&lt;br /&gt;latest ChangeLog&lt;br /&gt;&lt;br /&gt;2007-06-01  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;	* Makefile.am, configure.in, src/convmvfs.cpp:&lt;br /&gt;	update version and authors info&lt;br /&gt;&lt;br /&gt;2007-02-13  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;	* AUTHORS: change mail&lt;br /&gt;&lt;br /&gt;you can download it from here :&lt;br /&gt;http://downloads.sourceforge.net/fuse-convmvfs/fuse-convmvfs-0.2.4.tar.gz</description>
 <category>News</category>
-<link>http://www.tiddlywiki.com/#%5B%5Bfuse-convmvfs%200.2.4%20released%5D%5D</link>
-<pubDate>Wed, 30 Jul 2008 10:33:00 GMT</pubDate>
+<link>http://www.tiddlywiki.com/#%5B%5B2007-06-01%20-%20fuse-convmvfs%200.2.4%20released%5D%5D</link>
+<pubDate>Tue, 19 Aug 2008 00:06:00 GMT</pubDate>
 </item>
 <item>
-<title>fuse-convmvfs 0.2.3 released</title>
+<title>2006-07-28 - fuse-convmvfs 0.2.2 released</title>
+<description>fuse-convmvfs 0.2.2 released, this is a minor version of the 0.2.x serials to fix some criticle bugs.&lt;br /&gt;''latest ChangeLog''&lt;br /&gt;2006-07-28 hellwolfmisty &lt;hellwolfmisty@cocteau.freehell.org&gt;  &lt;br /&gt;* configure.in: version to 0.2.2  &lt;br /&gt;* src/convmvfs.cpp: &lt;br /&gt;** root can pass permission_walk without any check &lt;br /&gt;** memory leak in permission_walk when success &lt;br /&gt;** chown according to cond after mknod and mkdir(only when euid is 0) &lt;br /&gt;** enable chown oper(only when euid is 0) &lt;br /&gt;&lt;br /&gt;you can download from here:&lt;br /&gt;http://prdownloads.sourceforge.net/fuse-convmvfs/fuse-convmvfs-0.2.2.tar.gz?download</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5B2006-07-28%20-%20fuse-convmvfs%200.2.2%20released%5D%5D</link>
+<pubDate>Tue, 19 Aug 2008 00:05:00 GMT</pubDate>
+</item>
+<item>
+<title>2007-02-11 - fuse-convmvfs 0.2.3 released</title>
 <description>fuse-convmvfs 0.2.3 released, this is a minor version of the 0.2.x serials to fix some criticle bugs.&lt;br /&gt;latest ChangeLog&lt;br /&gt;2007-02-11  hellwolfmisty  &lt;hellwolfmisty@cocteau.freehell.org&gt;&lt;br /&gt;&lt;br /&gt;        * ChangeLog, Makefile.am, configure.in, src/.cvsignore, src/Makefile.in, src/convmvfs.cpp, test/music.tar, test/threadsafe.pl, .cvsignore:&lt;br /&gt;        merged from 0.2.fix&lt;br /&gt;&lt;br /&gt;        * src/convmvfs.cpp: merge patch from baz1&lt;br /&gt;&lt;br /&gt;        * test/music.tar, test/threadsafe.pl: New file.&lt;br /&gt;&lt;br /&gt;        * test/music.tar, test/threadsafe.pl, Makefile.am, configure.in:&lt;br /&gt;        add test&lt;br /&gt;&lt;br /&gt;you can download it from here :&lt;br /&gt;http://downloads.sourceforge.net/fuse-convmvfs/fuse-convmvfs-0.2.3.tar.gz</description>
 <category>News</category>
-<link>http://www.tiddlywiki.com/#%5B%5Bfuse-convmvfs%200.2.3%20released%5D%5D</link>
-<pubDate>Fri, 01 Jun 2007 02:39:00 GMT</pubDate>
+<link>http://www.tiddlywiki.com/#%5B%5B2007-02-11%20-%20fuse-convmvfs%200.2.3%20released%5D%5D</link>
+<pubDate>Tue, 19 Aug 2008 00:05:00 GMT</pubDate>
+</item>
+<item>
+<title>2008-08-18 - Debian officially included fuse-convmvfs</title>
+<description>Thanks to Stanislav Maslovski and Anthony Fok, fuse-convmvfs is now officially included into Debian.&lt;br /&gt;&lt;br /&gt;You can find the package at [1] and the bugreports (if there are any) can be found at [2].&lt;br /&gt;&lt;br /&gt;[1] http://packages.debian.org/sid/fuse-convmvfs&lt;br /&gt;[2] http://bugs.debian.org/fuse-convmvfs&lt;br /&gt;</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5B2008-08-18%20-%20Debian%20officially%20included%20fuse-convmvfs%5D%5D</link>
+<pubDate>Tue, 19 Aug 2008 00:04:00 GMT</pubDate>
 </item>
 <item>
 <title>MainMenu</title>
@@ -102,13 +123,6 @@
 <pubDate>Sun, 30 Jul 2006 07:35:00 GMT</pubDate>
 </item>
 <item>
-<title>website of fuse-convmvfs is up</title>
-<description>Thanks to TiddlyWiki tool, without which a lazy dog like me can not power up a website so quickly ;)&lt;br /&gt;&lt;br /&gt;project homepage:&lt;br /&gt;http://fuse-convmvfs.sourceforge.net/</description>
-<category>News</category>
-<link>http://www.tiddlywiki.com/#%5B%5Bwebsite%20of%20fuse-convmvfs%20is%20up%5D%5D</link>
-<pubDate>Sun, 30 Jul 2006 07:29:00 GMT</pubDate>
-</item>
-<item>
 <title>SiteTitle</title>
 <description>''fuse-convmvfs''</description>
 <link>http://www.tiddlywiki.com/#SiteTitle</link>
@@ -125,18 +139,6 @@
 <description>Leftside are something about this project and me ;)&lt;br /&gt;&lt;br /&gt;If you're interesting on this project please contact [[ZC Miao]].</description>
 <link>http://www.tiddlywiki.com/#Contact</link>
 <pubDate>Sun, 30 Jul 2006 07:21:00 GMT</pubDate>
-</item>
-<item>
-<title>Install</title>
-<description>First you need to download FUSE 2.5 or later from:&lt;br /&gt;  http://fuse.sourceforge.net&lt;br /&gt;After installing FUSE, compile convmvfs the usual way:&lt;br /&gt;{{{&lt;br /&gt;$./configure&lt;br /&gt;$make&lt;br /&gt;#make install&lt;br /&gt;}}}&lt;br /&gt;And you are ready to go.You can now type 'convmvfs --help&quot; to get help&lt;br /&gt;infomation.&lt;br /&gt;&lt;br /&gt;If checking out from CVS for the first time also do&lt;br /&gt;'autoreconf -iv' before doing './configure'.</description>
-<link>http://www.tiddlywiki.com/#Install</link>
-<pubDate>Sun, 30 Jul 2006 07:17:00 GMT</pubDate>
-</item>
-<item>
-<title>Download</title>
-<description>You can download fuse-convmvfs tarballs from [[here|http://sourceforge.net/project/showfiles.php?group_id=166276]]&lt;br /&gt;&lt;br /&gt;And if you're a fedora user, you can use yum repository of FedoraCN which also contains the latest stable version of fuse-convmvfs&lt;br /&gt;</description>
-<link>http://www.tiddlywiki.com/#Download</link>
-<pubDate>Sun, 30 Jul 2006 07:14:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
