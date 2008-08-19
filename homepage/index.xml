@@ -6,22 +6,28 @@
 <description>a userland file system to convert filename charset</description>
 <language>en-us</language>
 <copyright>Copyright 2008 ZC Miao</copyright>
-<pubDate>Tue, 19 Aug 2008 00:16:52 GMT</pubDate>
-<lastBuildDate>Tue, 19 Aug 2008 00:16:52 GMT</lastBuildDate>
+<pubDate>Tue, 19 Aug 2008 00:21:14 GMT</pubDate>
+<lastBuildDate>Tue, 19 Aug 2008 00:21:14 GMT</lastBuildDate>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 <generator>TiddlyWiki 2.0.11</generator>
 <item>
-<title>News</title>
-<description>Here you can find a list of project news, you can always find infomation about the latest release here.</description>
-<link>http://www.tiddlywiki.com/#News</link>
-<pubDate>Tue, 19 Aug 2008 00:16:45 GMT</pubDate>
+<title>MainMenu</title>
+<description>[[News]]&lt;br /&gt;[[Welcome]]&lt;br /&gt;[[Download]]&lt;br /&gt;[[Contact]]&lt;br /&gt;[[RSSFeed|http://fuse-convmvfs.sourceforge.net/index.xml]]&lt;br /&gt;&lt;br /&gt;[[fuse-convmvfs]]&lt;br /&gt;Copyright ©&lt;br /&gt;2006 - 2008&lt;br /&gt;[[ZC Miao]]</description>
+<link>http://www.tiddlywiki.com/#MainMenu</link>
+<pubDate>Tue, 19 Aug 2008 00:21:08 GMT</pubDate>
 </item>
 <item>
 <title>2008-08-19 - Version Control System migrated from cvs to svn</title>
 <description>Version Control System for fuse-convmvfs has been migrated from cvs to svn, for more information, please check:&lt;br /&gt;https://sourceforge.net/svn/?group_id=166276&lt;br /&gt;&lt;br /&gt;A git repository for trunk source code, which may be newer than svn repository of fuse-convmvfs at sourceforge, is also available from:&lt;br /&gt;Repository: http://linuxfire.com.cn/~hellwolf/git/fuse-convmvfs.git/&lt;br /&gt;Gitweb: http://linuxfire.com.cn/~hellwolf/cgi-bin/gitweb.cgi?p=fuse-convmvfs.git;a=summary&lt;br /&gt;</description>
 <category>News</category>
 <link>http://www.tiddlywiki.com/#%5B%5B2008-08-19%20-%20Version%20Control%20System%20migrated%20from%20cvs%20to%20svn%5D%5D</link>
-<pubDate>Tue, 19 Aug 2008 00:16:42 GMT</pubDate>
+<pubDate>Tue, 19 Aug 2008 00:16:00 GMT</pubDate>
+</item>
+<item>
+<title>News</title>
+<description>Here you can find a list of project news, you can always find infomation about the latest release here.</description>
+<link>http://www.tiddlywiki.com/#News</link>
+<pubDate>Tue, 19 Aug 2008 00:16:00 GMT</pubDate>
 </item>
 <item>
 <title>2006-07-30 - website of fuse-convmvfs is up</title>
@@ -57,12 +63,6 @@
 <category>News</category>
 <link>http://www.tiddlywiki.com/#%5B%5B2008-08-18%20-%20Debian%20officially%20included%20fuse-convmvfs%5D%5D</link>
 <pubDate>Tue, 19 Aug 2008 00:04:00 GMT</pubDate>
-</item>
-<item>
-<title>MainMenu</title>
-<description>[[News]]&lt;br /&gt;[[Welcome]]&lt;br /&gt;[[Download]]&lt;br /&gt;[[Contact]]&lt;br /&gt;[[RSSFeed|http://fuse-convmvfs.sourceforge.net/index.xml]]&lt;br /&gt;&lt;br /&gt;[[fuse-convmvfs]]&lt;br /&gt;Copyright ©&lt;br /&gt;2006 - 2007&lt;br /&gt;[[ZC Miao]]</description>
-<link>http://www.tiddlywiki.com/#MainMenu</link>
-<pubDate>Sun, 25 Feb 2007 11:07:00 GMT</pubDate>
 </item>
 <item>
 <title>ZC Miao</title>
