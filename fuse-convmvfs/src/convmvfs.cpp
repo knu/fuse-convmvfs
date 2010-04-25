@@ -8,6 +8,8 @@
  *
  */
 
+#include "config.h"
+
 #define FUSE_USE_VERSION 25
 #include <fuse.h>
 #include <fuse_opt.h>
@@ -22,6 +24,10 @@
 #include <iconv.h>
 #include <pthread.h>
 
+#if HAVE_ATTR_XATTR_H
+#include <attr/xattr.h>
+#endif
+
 #include <cstdlib>
 #include <cstdio>
 #include <cstring>
@@ -29,7 +35,6 @@
 #include <cassert>
 #include <string>
 
-#include "config.h"
 
 using namespace std;
 
@@ -554,7 +559,7 @@ static int convmvfs_chmod(const char *opath, mode_t mode){
   if(stat(ipath.c_str(), &stbuf)){
     return -errno;
   }
-  if(cont->uid != stbuf.st_uid)
+  if((cont->uid != stbuf.st_uid) && (cont->uid != 0))
     return -EPERM;
   if(chmod(ipath.c_str(),mode))
     return -errno;
@@ -619,6 +624,7 @@ static int convmvfs_chown(const char *opath, uid_t uid_2set, gid_t gid_2set){
   string ipath = convmvfs.srcdir + out2in(opath);
 
   struct fuse_context *cont = fuse_get_context();
+  /* FIX: grant access to chown if user is in target group */
   if(cont->uid == 0){
     if(chown(ipath.c_str(), uid_2set, gid_2set)){
       return -errno;
@@ -633,6 +639,7 @@ static int convmvfs_chown(const char *opath, uid_t uid_2set, gid_t gid_2set){
 static int convmvfs_statfs(const char *opath, struct statvfs *buf){
   string ipath = convmvfs.srcdir + out2in(opath);
 
+  /* permission check*/
   struct fuse_context *cont = fuse_get_context();
   int st = permission_walk(ipath.c_str(), cont->uid, cont->gid,0);
   if(st)
@@ -644,6 +651,72 @@ static int convmvfs_statfs(const char *opath, struct statvfs *buf){
 
   return 0;
 }
+
+#if HAVE_ATTR_XATTR_H
+
+static int convmvfs_listxattr(const char *opath, char *list, size_t listsize){
+  string ipath = convmvfs.srcdir + out2in(opath);
+
+  /* permission check*/
+  struct fuse_context *cont = fuse_get_context();
+  int st = permission_walk_parent(ipath.c_str(), cont->uid, cont->gid,
+                                  PERM_WALK_CHECK_EXEC);
+  if(st)
+    return st;
+  
+  return listxattr(ipath.c_str(), list, listsize);
+}
+
+static int convmvfs_removexattr(const char *opath, const char *xattr){
+  string ipath = convmvfs.srcdir + out2in(opath);
+
+  /* permission check*/
+  struct fuse_context *cont = fuse_get_context();
+  struct stat stbuf;
+  if(stat(ipath.c_str(), &stbuf)){
+    return -errno;
+  }
+  if((cont->uid != stbuf.st_uid) && (cont->uid != 0))
+    return -EPERM;
+  if(removexattr(ipath.c_str(), xattr))
+    return -errno;
+  return 0;
+}
+
+static int convmvfs_getxattr(const char *opath, const char *name, char *value, size_t valsize){
+  string ipath = convmvfs.srcdir + out2in(opath);
+
+  /* permission check*/
+  struct fuse_context *cont = fuse_get_context();
+  int st = permission_walk_parent(ipath.c_str(), cont->uid, cont->gid,
+                                  PERM_WALK_CHECK_EXEC);
+  if(st)
+    return st;
+  
+  int res = getxattr(ipath.c_str(), name, value, valsize);
+  if (res >= 0)
+    return res;
+  else
+    return -errno;
+}
+
+static int convmvfs_setxattr(const char *opath, const char *name, const char *value, size_t valsize, int flags){
+  string ipath = convmvfs.srcdir + out2in(opath);
+
+  /* permission check*/
+  struct fuse_context *cont = fuse_get_context();
+  struct stat stbuf;
+  if(stat(ipath.c_str(), &stbuf)){
+    return -errno;
+  }
+  if((cont->uid != stbuf.st_uid) && (cont->uid != 0))
+    return -EPERM;
+  if(setxattr(ipath.c_str(), name, value, valsize, flags))
+    return -errno;
+  return 0;
+}
+
+#endif /* HAVE_ATTR_XATTR_H */
 
 static void convmvfs_oper_init(){
   memset(&convmvfs_oper, 0, sizeof(convmvfs_oper));
@@ -668,6 +741,12 @@ static void convmvfs_oper_init(){
   convmvfs_oper.release = convmvfs_release;
   convmvfs_oper.access = convmvfs_access;
   convmvfs_oper.statfs = convmvfs_statfs;
+#if HAVE_ATTR_XATTR_H
+  convmvfs_oper.listxattr = convmvfs_listxattr;
+  convmvfs_oper.removexattr = convmvfs_removexattr;
+  convmvfs_oper.getxattr = convmvfs_getxattr;
+  convmvfs_oper.setxattr = convmvfs_setxattr;
+#endif
 
   convmvfs_oper.init = convmvfs_init;
 }
