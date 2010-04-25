@@ -1,4 +1,4 @@
-AC_INIT(fuse-convmvfs, 0.2.4)
+AC_INIT(fuse-convmvfs, 0.2.5)
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER(config.h)
 
@@ -8,6 +8,7 @@ AC_PROG_CXX
 CFLAGS="$CFLAGS -Wall -W"
 CXXFLAGS="$CXXFLAGS -Wall -W"
 
+AC_CHECK_HEADERS(attr/xattr.h)
 PKG_CHECK_MODULES(CONVMVFS, [fuse >= 2.5])
 
 AC_CONFIG_FILES([
@@ -15,4 +16,3 @@ Makefile
 src/Makefile
 ])
 AC_OUTPUT
-
