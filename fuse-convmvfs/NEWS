@@ -1,3 +1,8 @@
+What is new in 0.2.5
+------------------
+* xattr support
+* Version control system changed to git
+
 What is new in 0.2
 ------------------
 * New Implemented functions: opendir readlink mknod mkdir unlink rmdir
