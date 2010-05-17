@@ -6,16 +6,16 @@
 <description>a userland file system to convert filename charset</description>
 <language>en-us</language>
 <copyright>Copyright 2010 ZC Miao</copyright>
-<pubDate>Sat, 15 May 2010 17:14:44 GMT</pubDate>
-<lastBuildDate>Sat, 15 May 2010 17:14:44 GMT</lastBuildDate>
+<pubDate>Mon, 17 May 2010 19:57:45 GMT</pubDate>
+<lastBuildDate>Mon, 17 May 2010 19:57:45 GMT</lastBuildDate>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 <generator>TiddlyWiki 2.0.11</generator>
 <item>
 <title>2010-05-15 - Welcome new developer</title>
-<description>Welcome Mihail Kotelniko joined as a developer, and thanks again to his patch of xattr support to fuse-convmvfs.&lt;br /&gt;&lt;br /&gt;Cheers!</description>
+<description>Welcome Mihail Kotelnikov joined as a developer, and thanks again to his patch of xattr support to fuse-convmvfs.&lt;br /&gt;&lt;br /&gt;Cheers!</description>
 <category>News</category>
 <link>http://www.tiddlywiki.com/#%5B%5B2010-05-15%20-%20Welcome%20new%20developer%5D%5D</link>
-<pubDate>Sat, 15 May 2010 17:14:38 GMT</pubDate>
+<pubDate>Mon, 17 May 2010 19:57:23 GMT</pubDate>
 </item>
 <item>
 <title>2010-05-15 - fuse-convmvfs 0.2.5 released</title>
