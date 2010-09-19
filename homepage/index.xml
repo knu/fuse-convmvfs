@@ -6,16 +6,23 @@
 <description>a userland file system to convert filename charset</description>
 <language>en-us</language>
 <copyright>Copyright 2010 ZC Miao</copyright>
-<pubDate>Mon, 17 May 2010 19:57:45 GMT</pubDate>
-<lastBuildDate>Mon, 17 May 2010 19:57:45 GMT</lastBuildDate>
+<pubDate>Sun, 19 Sep 2010 17:23:00 GMT</pubDate>
+<lastBuildDate>Sun, 19 Sep 2010 17:23:00 GMT</lastBuildDate>
 <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 <generator>TiddlyWiki 2.0.11</generator>
+<item>
+<title>2010-09-19 - fuse-convmvfs 0.2.6 released</title>
+<description>This is a minor version of the 0.2.x serials to fix some criticle bugs.&lt;br /&gt;&lt;br /&gt;This version provides a symlinks related security bug, see more at:&lt;br /&gt;http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=594021&lt;br /&gt;&lt;br /&gt;You can download it from here :&lt;br /&gt;https://sourceforge.net/projects/fuse-convmvfs/files/fuse-convmvfs/0.2.6/fuse-convmvfs-0.2.6.tar.gz/download</description>
+<category>News</category>
+<link>http://www.tiddlywiki.com/#%5B%5B2010-09-19%20-%20fuse-convmvfs%200.2.6%20released%5D%5D</link>
+<pubDate>Sun, 19 Sep 2010 17:22:39 GMT</pubDate>
+</item>
 <item>
 <title>2010-05-15 - Welcome new developer</title>
 <description>Welcome Mihail Kotelnikov joined as a developer, and thanks again to his patch of xattr support to fuse-convmvfs.&lt;br /&gt;&lt;br /&gt;Cheers!</description>
 <category>News</category>
 <link>http://www.tiddlywiki.com/#%5B%5B2010-05-15%20-%20Welcome%20new%20developer%5D%5D</link>
-<pubDate>Mon, 17 May 2010 19:57:23 GMT</pubDate>
+<pubDate>Mon, 17 May 2010 19:57:00 GMT</pubDate>
 </item>
 <item>
 <title>2010-05-15 - fuse-convmvfs 0.2.5 released</title>
@@ -136,12 +143,6 @@
 <category>Doc</category>
 <link>http://www.tiddlywiki.com/#Motivation</link>
 <pubDate>Sun, 30 Jul 2006 07:36:00 GMT</pubDate>
-</item>
-<item>
-<title>HowToUse</title>
-<description>Once convmvfs is installed running it is very simple:&lt;br /&gt;{{{&lt;br /&gt;usage: convmvfs mountpoint [options]&lt;br /&gt;&lt;br /&gt;general options:&lt;br /&gt;    -o opt,[opt...]        mount options&lt;br /&gt;    -h   --help            print help&lt;br /&gt;    -V   --version         print version&lt;br /&gt;&lt;br /&gt;FUSE options:&lt;br /&gt;    -d   -o debug          enable debug output (implies -f)&lt;br /&gt;    -f                     foreground operation&lt;br /&gt;    -s                     disable multi-threaded operation&lt;br /&gt;&lt;br /&gt;    -o allow_other         allow access to other users&lt;br /&gt;    -o allow_root          allow access to root&lt;br /&gt;    -o nonempty            allow mounts over non-empty file/dir&lt;br /&gt;    -o default_permissions enable permission checking by kernel&lt;br /&gt;    -o fsname=NAME         set filesystem name&lt;br /&gt;    -o large_read          issue large read requests (2.4 only)&lt;br /&gt;    -o max_read=N          set maximum size of read requests&lt;br /&gt;&lt;br /&gt;    -o hard_remove         immediate removal (don't hide files)&lt;br /&gt;    -o use_ino             let filesystem set inode numbers&lt;br /&gt;    -o readdir_ino         try to fill in d_ino in readdir&lt;br /&gt;    -o direct_io           use direct I/O&lt;br /&gt;    -o kernel_cache        cache files in kernel&lt;br /&gt;    -o umask=M             set file permissions (octal)&lt;br /&gt;    -o uid=N               set file owner&lt;br /&gt;    -o gid=N               set file group&lt;br /&gt;    -o entry_timeout=T     cache timeout for names (1.0s)&lt;br /&gt;    -o negative_timeout=T  cache timeout for deleted names (0.0s)&lt;br /&gt;    -o attr_timeout=T      cache timeout for attributes (1.0s)&lt;br /&gt;&lt;br /&gt;CONVMVFS options:&lt;br /&gt;    -o srcdir=PATH         which directory to convert&lt;br /&gt;    -o icharset=CHARSET    charset used in srcdir&lt;br /&gt;    -o ocharset=CHARSET    charset used in mounted filesystem&lt;br /&gt;}}}&lt;br /&gt;Note:&lt;br /&gt;* If you use normal user to mount file system be sure to have &lt;br /&gt;r/w permision to /dev/fuse.&lt;br /&gt;* use `iconv --list` to see which charsets are supported.&lt;br /&gt;* to allow other user to access the mount point use allow_other option&lt;br /&gt;* IMPORTANT: if mount point and srcdir was the same dir, readdir oper&lt;br /&gt;  would enter dead loop. BE SURE TO AVOID THIS SITUATION!&lt;br /&gt;&lt;br /&gt;Sample use:&lt;br /&gt;* to mount&lt;br /&gt;{{{&lt;br /&gt;$convmvfs /ftp/pub_gbk -o srcdir=/ftp/pub, icharset=utf8,ocharset=gbk&lt;br /&gt;}}}&lt;br /&gt;* to umount&lt;br /&gt;{{{&lt;br /&gt;$fusermount -u /ftp/pub_gbk&lt;br /&gt;}}}&lt;br /&gt;</description>
-<link>http://www.tiddlywiki.com/#HowToUse</link>
-<pubDate>Sun, 30 Jul 2006 07:35:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
