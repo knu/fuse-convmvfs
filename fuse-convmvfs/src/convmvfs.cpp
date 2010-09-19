@@ -490,8 +490,12 @@ static int convmvfs_symlink(const char *oldpath, const char *newpath){
   if(st)
     return st;
 
-  if(symlink(out2in(oldpath).c_str(), inewpath.c_str()))
-    return -errno;
+  int rt = symlink(out2in(oldpath).c_str(), inewpath.c_str());
+  if (rt) return -errno;
+
+  if(euid == 0){
+    lchown(inewpath.c_str(), cont->uid, cont->gid);
+  }
   return 0;
 }
 
@@ -662,7 +666,7 @@ static int convmvfs_listxattr(const char *opath, char *list, size_t listsize){
   if(st)
     return st;
   
-  return listxattr(ipath.c_str(), list, listsize);
+  return llistxattr(ipath.c_str(), list, listsize);
 }
 
 static int convmvfs_removexattr(const char *opath, const char *xattr){
@@ -676,7 +680,7 @@ static int convmvfs_removexattr(const char *opath, const char *xattr){
   }
   if((cont->uid != stbuf.st_uid) && (cont->uid != 0))
     return -EPERM;
-  if(removexattr(ipath.c_str(), xattr))
+  if(lremovexattr(ipath.c_str(), xattr))
     return -errno;
   return 0;
 }
@@ -691,7 +695,7 @@ static int convmvfs_getxattr(const char *opath, const char *name, char *value, s
   if(st)
     return st;
   
-  int res = getxattr(ipath.c_str(), name, value, valsize);
+  int res = lgetxattr(ipath.c_str(), name, value, valsize);
   if (res >= 0)
     return res;
   else
@@ -709,7 +713,7 @@ static int convmvfs_setxattr(const char *opath, const char *name, const char *va
   }
   if((cont->uid != stbuf.st_uid) && (cont->uid != 0))
     return -EPERM;
-  if(setxattr(ipath.c_str(), name, value, valsize, flags))
+  if(lsetxattr(ipath.c_str(), name, value, valsize, flags))
     return -errno;
   return 0;
 }
