@@ -1,3 +1,7 @@
+What is new in 0.2.6
+--------------------
+* Fix Symlinks owner and xattr symlinks dereferencing issue
+
 What is new in 0.2.5
 ------------------
 * xattr support
