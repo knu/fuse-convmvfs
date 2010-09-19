@@ -15,7 +15,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <sys/vfs.h>
 #include <dirent.h>
 #include <fcntl.h>
 #include <errno.h>
@@ -56,7 +55,9 @@ static uid_t euid;
 gid_t egid;
 
 static void init_gvars(){
-  convmvfs.cwd = get_current_dir_name();
+  static char cwd[PATH_MAX];
+  getcwd(cwd, sizeof(cwd));
+  convmvfs.cwd = cwd;
   convmvfs.srcdir = CONVMVFS_DEFAULT_SRCDIR;
   convmvfs.icharset = CONVMVFS_DEFAULT_ICHARSET;
   convmvfs.ocharset =  CONVMVFS_DEFAULT_OCHARSET;
