@@ -13,6 +13,7 @@
 #include <fuse_opt.h>
 
 #include <unistd.h>
+#include <sys/param.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h>
@@ -55,7 +56,7 @@ static uid_t euid;
 gid_t egid;
 
 static void init_gvars(){
-  static char cwd[PATH_MAX];
+  static char cwd[MAXPATHLEN];
   getcwd(cwd, sizeof(cwd));
   convmvfs.cwd = cwd;
   convmvfs.srcdir = CONVMVFS_DEFAULT_SRCDIR;
