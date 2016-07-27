@@ -45,6 +45,11 @@ After installing FUSE, compile convmvfs the usual way:
 And you are ready to go.You can now type 'convmvfs --help" to get help
 infomation.
 
+To build on macOS, install FUSE for OS X (https://osxfuse.github.io/)
+and pkg-config (from Homebrew or MacPorts), then run configure with
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig where fuse.pc should be
+located.
+
 If checking out from CVS for the first time also do
 'autoreconf -iv' before doing './configure'.
 
